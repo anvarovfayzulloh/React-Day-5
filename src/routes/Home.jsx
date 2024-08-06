@@ -28,14 +28,21 @@ const Home = () => {
                             <tbody>
                                 {users.map(user => (
                                     <tr key={user.id}>
-                                        <td><img src={user.avatar} className="user__avatar" /></td>
+                                        <td><Link to={`/user/${user.id}`}><img src={user.avatar} className="user__avatar" /></Link></td>
                                         <td><Link to={`/user/${user.id}`}>{user.first_name} {user.last_name}</Link></td>
-                                        <td>{user.email}</td>
+                                        <td><Link to={`/user/${user.id}`}>{user.email}</Link></td>
+
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                     ) : <p>No users found.</p>}
+                </div>
+                <div>
+                    {
+                        SVGAnimationElement = () => {
+                            return (                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">                                       
+                    }
                 </div>
             </div>
         </section>
